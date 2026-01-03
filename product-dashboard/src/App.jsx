@@ -4,7 +4,7 @@ const initialProducts = [
   {
     id: 1,
     name: "Smartphone",
-    price: 699,
+    price: 14999,
     category: "Electronics",
     stock: 15,
     description: "High performance smartphone with OLED display.",
@@ -13,7 +13,7 @@ const initialProducts = [
   {
     id: 2,
     name: "Running Shoes",
-    price: 120,
+    price: 3500,
     category: "Apparel",
     stock: 40,
     description: "Comfortable running shoes for daily workouts.",
@@ -22,7 +22,7 @@ const initialProducts = [
   {
     id: 3,
     name: "Bluetooth Speaker",
-    price: 50,
+    price: 1999,
     category: "Electronics",
     stock: 18,
     description: "Portable speaker with powerful bass.",
@@ -31,7 +31,7 @@ const initialProducts = [
   {
     id: 4,
     name: "Office Chair",
-    price: 89,
+    price: 2999,
     category: "Furniture",
     stock: 10,
     description: "Ergonomic office chair with lumbar support.",
@@ -40,7 +40,7 @@ const initialProducts = [
   {
     id: 5,
     name: "Laptop",
-    price: 999,
+    price: 40999,
     category: "Electronics",
     stock: 8,
     description: "Lightweight laptop for work and study.",
@@ -49,7 +49,7 @@ const initialProducts = [
   {
     id: 6,
     name: "Wrist Watch",
-    price: 150,
+    price: 999,
     category: "Accessories",
     stock: 25,
     description: "Stylish wrist watch with leather strap.",
@@ -58,7 +58,7 @@ const initialProducts = [
   {
     id: 7,
     name: "Backpack",
-    price: 60,
+    price: 799,
     category: "Accessories",
     stock: 30,
     description: "Durable backpack for travel and college.",
@@ -67,7 +67,7 @@ const initialProducts = [
   {
     id: 8,
     name: "Headphones",
-    price: 90,
+    price: 1499,
     category: "Electronics",
     stock: 22,
     description: "Noise cancelling over-ear headphones.",
@@ -76,7 +76,7 @@ const initialProducts = [
   {
     id: 9,
     name: "Coffee Mug",
-    price: 15,
+    price: 150,
     category: "Kitchen",
     stock: 50,
     description: "Ceramic coffee mug for daily use.",
@@ -85,7 +85,7 @@ const initialProducts = [
   {
     id: 10,
     name: "Desk Lamp",
-    price: 35,
+    price: 350,
     category: "Furniture",
     stock: 14,
     description: "LED desk lamp with adjustable brightness.",
@@ -94,7 +94,7 @@ const initialProducts = [
   {
     id: 11,
     name: "Gaming Mouse",
-    price: 45,
+    price: 450,
     category: "Electronics",
     stock: 20,
     description: "High precision gaming mouse.",
@@ -103,7 +103,7 @@ const initialProducts = [
   {
     id: 12,
     name: "Keyboard",
-    price: 70,
+    price: 499,
     category: "Electronics",
     stock: 18,
     description: "Mechanical keyboard with RGB lights.",
@@ -112,7 +112,7 @@ const initialProducts = [
   {
     id: 13,
     name: "Sunglasses",
-    price: 55,
+    price: 599,
     category: "Accessories",
     stock: 35,
     description: "UV protected sunglasses.",
@@ -121,7 +121,7 @@ const initialProducts = [
   {
     id: 14,
     name: "Water Bottle",
-    price: 20,
+    price: 399,
     category: "Fitness",
     stock: 60,
     description: "Reusable stainless steel water bottle.",
@@ -133,7 +133,7 @@ const PAGE_SIZE = 6;
 
 export default function App() {
   const [products, setProducts] = useState(initialProducts);
-  const [view, setView] = useState("list");
+  const [view, setView] = useState("card");
   const [search, setSearch] = useState("");
   const [debouncedSearch, setDebouncedSearch] = useState("");
   const [page, setPage] = useState(1);
@@ -217,7 +217,7 @@ export default function App() {
                   </td>
                   <td>{p.name}</td>
                   <td className="d-none d-md-table-cell">{p.description}</td>
-                  <td>${p.price}</td>
+                  <td>{p.price}</td>
                   <td>{p.stock}</td>
                 </tr>
               ))}
