@@ -123,11 +123,10 @@ export default function App() {
             >
               Card
             </button>
-
              <button
-          className="btn btn-info mt-2 mt-md-0"
-          onClick={() => setShowModal(true)}
-        >
+                className="btn btn-info mt-0 mt-md-0"
+                onClick={() => setShowModal(true)}
+            >
           + Add Product
         </button>
           </div>
